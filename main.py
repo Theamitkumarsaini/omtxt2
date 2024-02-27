@@ -177,7 +177,7 @@ async def txt_handler(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading📥:-**\n\n** Video Name🚦 :-** `{name}\nQuality📹 - {raw_text2}`\n**link:**`{url}`\n\n **bot made by ✯✿ 💪 महाबली COURSES 🚩 ✿✯**")
+                    prog = await m.reply_text(f"**Downloading📥:-**\n\n** Video Name🚦 :-** `{name}\nQuality📹 - {raw_text2}`\n**link:**`{url}`\n\n **bot made by OM ✯**")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
@@ -195,7 +195,7 @@ async def txt_handler(bot: Client, m: Message):
     await m.reply_text("🔰Done🔰")
 @bot.on_message(filters.command(["vpdf"])&(filters.chat(auth_users)))
 async def vision_pdf(bot: Client, m: Message):
-    editable = await m.reply_text("**Hello Dear,** I am Text File Downloader📥 Bot.\nI can download **PDFs of vision** from text file one by one.\n\n**Developer: @batmanhcbot👨🏻‍💻** \n**Language:** Python\n**Framework:** 🔥Pyrogram\n\nNow Send Your **TXT File:-**\n")
+    editable = await m.reply_text("**Hello Dear,** I am Text File Downloader📥 Bot.\nI can download **PDFs of vision** from text file one by one.\n\n**Developer: OM** \n**Language:** Python\n**Framework:** 🔥Pyrogram\n\nNow Send Your **TXT File:-**\n")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
