@@ -22,21 +22,21 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6824166529:AAG5Z5Oy5Y9nj02ZeHHNZ8LS4O177HwP50g",
+             bot_token= "6590553618:AAFLbdq93a358ar6fAlkv13ssTrKgqLoBEQ",
              api_id=10499690,
              api_hash= "87d0414dc159c10225cac921edde640a")
-auth_users = [6585878012,-1002122540539]
+auth_users = [5829511291,-1001534923424]
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"Hello Bot Made BY 💪 महाबली COURSES 🚩\nPress /AJ")
+    editable = await m.reply_text(f"Hello Bot Made BY OM\nPress /om")
 
 @bot.on_message(filters.command("stop")&(filters.chat(auth_users)))
 async def restart_handler(_, m):
     await m.reply_text("**STOPPED**🛑", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@bot.on_message(filters.command(["AJ"])&(filters.chat(auth_users)))
+@bot.on_message(filters.command(["om"])&(filters.chat(auth_users)))
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSend txt file📥**")
     input: Message = await bot.listen(editable.chat.id,filters.user(m.from_user.id))
